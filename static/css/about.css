@@ -1,16 +1,18 @@
 /* About Page Styles */
+
 .about-hero {
-	background: linear-gradient(120deg, #eb25d1 0%, #6726e9 100%);
-	color: #a416cb;
-	padding: 60px 0 40px 0;
+	background: linear-gradient(135deg, #6a11cb 0%, #b721ff 100%);
+	color: #ffffff;
+	padding: 70px 0 50px 0;
 	text-align: center;
-	box-shadow: 0 4px 24px rgba(10, 71, 205, 0.902);
+	box-shadow: 0 8px 30px rgba(106, 17, 203, 0.4);
 }
 
 .about-content {
-	background: #cac6c6;
-	padding: 48px 0;
+	background: #f5f0ff;
+	padding: 50px 0;
 }
+
 .about-grid {
 	display: flex;
 	max-width: 1200px;
@@ -25,7 +27,7 @@
 }
 
 .about-text h2 {
-	color: #2563eb;
+	color: #6a11cb;
 	font-size: 1.8rem;
 	margin-bottom: 16px;
 	margin-top: 32px;
@@ -36,9 +38,9 @@
 }
 
 .about-text p {
-	color: #333;
+	color: #4b3f72;
 	font-size: 1.1rem;
-	line-height: 1.6;
+	line-height: 1.7;
 	margin-bottom: 20px;
 }
 
@@ -48,7 +50,7 @@
 }
 
 .about-text li {
-	color: #333;
+	color: #4b3f72;
 	font-size: 1rem;
 	line-height: 1.5;
 	margin-bottom: 8px;
@@ -60,50 +62,57 @@
 }
 
 .placeholder-image {
-	background: #f7f9fb;
-	border-radius: 12px;
+	background: #ede7ff;
+	border-radius: 14px;
 	padding: 40px;
-	border: 2px dashed #4f8cff;
-	color: #4f8cff;
+	border: 2px dashed #a78bfa;
+	color: #6a11cb;
 	font-weight: 600;
+	box-shadow: 0 4px 20px rgba(167, 139, 250, 0.3);
 }
 
+/* Team Section */
+
 .team-section {
-	background: #eaf6ff;
-	padding: 40px 0;
+	background: linear-gradient(135deg, #f3e8ff, #ede9fe);
+	padding: 50px 0;
 	text-align: center;
 }
 
 .team-section h2 {
-	color: #2563eb;
+	color: #6a11cb;
 	font-size: 2rem;
 	margin-bottom: 18px;
 }
 
 .team-section p {
-	color: #333;
+	color: #4b3f72;
 	font-size: 1.1rem;
 	max-width: 700px;
 	margin: 0 auto;
 }
 
+/* Contact Section */
+
 .contact-section {
-	background: #fff;
-	padding: 40px 0;
+	background: #ffffff;
+	padding: 50px 0;
 	text-align: center;
 }
 
 .contact-section h2 {
-	color: #2563eb;
+	color: #6a11cb;
 	font-size: 2rem;
 	margin-bottom: 18px;
 }
 
 .contact-section p {
-	color: #333;
+	color: #4b3f72;
 	font-size: 1.1rem;
 	margin-bottom: 12px;
 }
+
+/* Responsive */
 
 @media (max-width: 768px) {
 	.about-grid {
