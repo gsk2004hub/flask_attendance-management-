@@ -1,129 +1,186 @@
+/* ===== Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+	--primary: #7c3aed;
+	--secondary: #c084fc;
+	--dark: #3b2f63;
+	--light-bg: #f5f0ff;
+	--card-bg: rgba(255, 255, 255, 0.65);
+}
+
+/* ===== Body ===== */
 body {
-	font-family: 'Segoe UI', Arial, sans-serif;
-	background: #f5f0ff;
+	font-family: 'Poppins', sans-serif;
+	background: linear-gradient(180deg, #f5f0ff, #ede9fe);
 	margin: 0;
-	color: #3b2f63;
+	color: var(--dark);
 }
 
 /* ===== Hero Section ===== */
 .home-hero {
-	background: linear-gradient(135deg, #6a11cb 0%, #b721ff 100%);
-	color: #ffffff;
-	padding: 70px 0 50px 0;
+	background: linear-gradient(135deg, #5f0fdc, #7c3aed, #c084fc);
+	color: #fff;
+	padding: 100px 20px 80px;
 	text-align: center;
-	box-shadow: 0 6px 30px rgba(106, 17, 203, 0.35);
+	position: relative;
+	overflow: hidden;
 }
 
+/* Glow */
+.home-hero::before {
+	content: "";
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle, rgba(192,132,252,0.35), transparent 70%);
+	top: -200px;
+	left: 50%;
+	transform: translateX(-50%);
+	filter: blur(50px);
+}
+
+/* Calligraphy Heading */
 .hero-content h1 {
-	font-size: 2.8rem;
-	margin-bottom: 12px;
-	font-weight: 700;
+	font-family: 'Playfair Display', serif;
+	font-size: 3.5rem;
+	margin-bottom: 10px;
 	letter-spacing: 1px;
 }
 
+/* Subtitle */
 .hero-content .subtitle {
-	font-size: 1.3rem;
-	margin-bottom: 28px;
-	color: #e9d5ff;
+	font-size: 1.2rem;
+	color: #ede9fe;
+	margin-bottom: 35px;
 }
 
-/* CTA Button */
+/* CTA */
 .cta-btn {
 	display: inline-block;
 	background: linear-gradient(135deg, #c084fc, #a855f7);
-	color: #ffffff;
-	padding: 14px 36px;
-	border-radius: 30px;
-	font-size: 1.1rem;
+	color: #fff;
+	padding: 14px 42px;
+	border-radius: 50px;
 	font-weight: 600;
 	text-decoration: none;
-	box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
-	transition: all 0.3s ease;
+	box-shadow: 0 8px 25px rgba(168,85,247,0.5);
+	transition: 0.3s;
 }
 
 .cta-btn:hover {
-	background: linear-gradient(135deg, #a855f7, #7c3aed);
-	transform: translateY(-2px);
-	box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+	transform: translateY(-4px) scale(1.05);
+	box-shadow: 0 12px 35px rgba(168,85,247,0.6);
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 2.4rem;
+	color: var(--primary);
+	margin-bottom: 40px;
 }
 
 /* ===== Features Section ===== */
 .features-section {
-	background: #ede9fe;
-	padding: 50px 0 40px 0;
+	padding: 80px 20px;
 	text-align: center;
 }
 
-.features-section h2 {
-	font-size: 2rem;
-	margin-bottom: 32px;
-	color: #6a11cb;
-}
-
+/* Grid */
 .features-grid {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 32px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 30px;
+	max-width: 1100px;
+	margin: auto;
 }
 
-/* Feature Cards */
+/* ===== Premium Cards ===== */
 .feature-card {
-	background: #ffffff;
-	border-radius: 18px;
-	box-shadow: 0 4px 20px rgba(167, 139, 250, 0.2);
-	padding: 28px 24px;
-	width: 270px;
-	min-height: 180px;
-	text-align: left;
-	transition: all 0.25s ease;
+	background: var(--card-bg);
+	backdrop-filter: blur(14px);
+	border-radius: 22px;
+	padding: 35px 25px;
+	text-align: center;
+	border: 1px solid rgba(255,255,255,0.3);
+	box-shadow: 0 10px 30px rgba(167,139,250,0.25);
+	transition: 0.35s;
+	position: relative;
+	overflow: hidden;
 }
 
+/* top glow line */
+.feature-card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(90deg, #c084fc, #7c3aed);
+}
+
+/* hover */
 .feature-card:hover {
-	transform: translateY(-8px) scale(1.04);
-	box-shadow: 0 10px 30px rgba(167, 139, 250, 0.35);
+	transform: translateY(-12px) scale(1.05);
+	box-shadow: 0 18px 45px rgba(167,139,250,0.4);
+}
+
+/* icon circle */
+.feature-card i {
+	font-size: 2rem;
+	color: white;
+	background: linear-gradient(135deg, #a855f7, #7c3aed);
+	padding: 18px;
+	border-radius: 50%;
+	margin-bottom: 15px;
+	display: inline-block;
+	box-shadow: 0 5px 15px rgba(168,85,247,0.5);
 }
 
 .feature-card h3 {
-	color: #7c3aed;
+	font-size: 1.3rem;
+	color: var(--primary);
 	margin-bottom: 10px;
-	font-size: 1.2rem;
 }
 
 .feature-card p {
 	color: #4b3f72;
 	font-size: 1rem;
+	line-height: 1.6;
 }
 
 /* ===== About Section ===== */
 .about-section {
-	background: #f5f3ff;
-	padding: 45px 0 35px 0;
+	background: linear-gradient(180deg, #f5f3ff, #ede9fe);
+	padding: 70px 20px;
 	text-align: center;
 }
 
-.about-section h2 {
-	color: #6a11cb;
-	font-size: 2rem;
-	margin-bottom: 18px;
+.about-section p {
+	max-width: 700px;
+	margin: auto;
+	font-size: 1.1rem;
+	line-height: 1.8;
 }
 
-.about-section p {
-	color: #4b3f72;
-	font-size: 1.1rem;
-	max-width: 700px;
-	margin: 0 auto;
+/* ===== Divider ===== */
+.section-divider {
+	width: 80px;
+	height: 4px;
+	background: linear-gradient(90deg, #c084fc, #7c3aed);
+	margin: 0 auto 30px;
+	border-radius: 5px;
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 900px) {
-	.features-grid {
-		flex-direction: column;
-		align-items: center;
+@media (max-width: 768px) {
+	.hero-content h1 {
+		font-size: 2.4rem;
 	}
 
-	.feature-card {
-		width: 90%;
-		margin-bottom: 18px;
+	.section-title {
+		font-size: 1.8rem;
 	}
 }
