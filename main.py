@@ -43,10 +43,10 @@ def login():
         user=User.query.filter_by(email=email,password=password).first()
         if user:
             session["user_id"] = user.id
-            return render_template("Home.html",user=user)
+            return render_template("home.html",user=user)
         else:
-            return render_template("Login.html")
-    return render_template("Login.html")
+            return render_template("login.html")
+    return render_template("login.html")
 
 @app.route("/logout/<int:user_id>")
 def logout(user_id):
