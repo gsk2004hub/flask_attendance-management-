@@ -31,7 +31,7 @@ def signup():
             return render_template("signup.html",error="Email already exists")
         db_user=User.query.filter_by(name=name).first()
         if db_user:
-            return render_template("signup.html",error="Username already exists"))
+            return render_template("signup.html",error="Username already exists")
         
         user=User(name=name,email=email,password=password)
         db.session.add(user)
